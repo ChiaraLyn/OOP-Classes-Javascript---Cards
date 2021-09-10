@@ -5,14 +5,32 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main_gray: #3d3939;
+  --mid_gray: #535858;
+  --light_gray: #887c7c;
+  --accent_clr: #97f2f8;
+  --smoke_white: #e7e7e7;
+  --smoke_mid_white: #eeeeee;
+}
+
 body {
- background:#887c7c;
- color: #ffffff;
+ background: var(--light_gray);
+ color: var(--smoke_white);
  -webkit-font-smoothing: antialiased;
+ display: -webkit-box;
+ display: -ms-flexbox;
  display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
+ -webkit-box-orient: vertical;
+ -webkit-box-direction: normal;
+ -ms-flex-direction: column;
+         flex-direction: column;
+ -webkit-box-pack: center;
+ -ms-flex-pack: center;
+         justify-content: center;
+ -webkit-box-align: center;
+ -ms-flex-align: center;
+         align-items: center;
 }
 
 body, input, button {
@@ -29,8 +47,8 @@ button {
 }
 
 .cards {
-  background:#3d3939;
-  border: 1px solid #ffffff;
+  background-color: var(--main_gray);
+  border: 1px solid var(--smoke_white);
   height: auto;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -55,73 +73,104 @@ button {
 }
 
 .card {
-  border: 1px solid #97f2f8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+          align-items: center;
+
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--accent_clr);
   height: auto;
+
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  padding: 1rem;
+ 
+  -webkit-transition: background-color 0.3s ease-in;
+  -moz-transition: background-color 0.3s ease-in;
+  -ms-transition: background-color 0.3s ease-in;
+  -o-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
 }
 
 .card:hover {
- background-color: #f6f6f6;
+  background-color: var(--smoke_mid_white);
 }
 
 .card__title {
-  color: #3d3939;
+  color: var(--main_gray);
   font-weight: 600;
   font-size: 1.3rem;
 }
 
+
 .card__text {
-  color: #3d3939;
+  color: var(--main_gray);
   font-size: 0.8rem;
 }
 
 .card__btn__container {
   width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+          align-items: center;
 }
 
 .card__info {
-  color:#3d3939;
+  color:var(--main_gray);
   margin-top: 2rem;
-  border: 1px solid #535858;
+  border: 1px solid var(--mid_gray);
   padding: 1rem;
-  border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=13, Direction=135, Color=#C2C2C2)";/*IE 8*/
-  -moz-box-shadow: 3px 3px 13px 2px #C2C2C2;/*FF 3.5+*/
-  -webkit-box-shadow: 3px 3px 13px 2px #C2C2C2;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
-  box-shadow: 3px 3px 13px 2px #C2C2C2;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
-  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=13, Direction=135, Color=#C2C2C2); /*IE 5.5-7*/;
+  border-radius: 4px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=13, Direction=135, Color=#C2C2C2)";
+  -moz-box-shadow: 3px 3px 13px 2px #C2C2C2;
+  -webkit-box-shadow: 3px 3px 13px 2px #C2C2C2;  
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=13, Direction=135, Color=#C2C2C2);
+  box-shadow: 3px 3px 13px 2px #C2C2C2;
 }
 
 
 /*=============================================
 =            MEDIA QUERY            =
 =============================================*/
+
 @media screen and (max-width: 992px){
   .card__btn__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+            flex-direction: column;
   }
   .card__btn__container .btn:first-child {
     margin-bottom: 1rem;
   }
 }
+
 @media screen and (max-width: 767px) {
   .container {
     width: 100%;
@@ -129,7 +178,6 @@ button {
   .cards {
     padding: 2rem;
   }
-
   h1 {
     font-size: 2rem;
   }

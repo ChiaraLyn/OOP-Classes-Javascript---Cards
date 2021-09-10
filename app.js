@@ -134,9 +134,8 @@ Cards.prototype.injection = function () {
 
       hideInfo();
 
-
     } else {
-      // If click on REMOVE   
+      // If click on REMOVE  
 
       // Define action buttons   
       actionBtn.classList.remove(classDanger);
@@ -147,7 +146,6 @@ Cards.prototype.injection = function () {
       container = inactiveCardContainer;//where the card will be placed
       container.appendChild(injectedCard);
       otherContainer = activeCardContainer;//where the card was before click
-
 
       hideInfo();
 
@@ -185,24 +183,28 @@ class CardsList {
       'Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede. Morbi nec metus. Vestibulum suscipit nulla.',
       'Nulla consequat massa quis enim. Curabitur ullamcorper ultricies nisi. Donec vitae sapien ut libero venenatis faucibus. Nunc nec neque. Sed lectus. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Fusce fermentum odio nec arcu. Phasellus gravida semper nisi. Nam eget dui.',
       true),
+    
     new Cards(
       'Card Two',
       'Mauris sollicitudin fermentum libero. Proin faucibus arcu quis ante. Nunc interdum lacus sit amet orci.',
       'Phasellus blandit leo ut odio. Suspendisse nisl elit, rhoncus eget, elementum ac, condimentum eget, diam. Suspendisse potenti. Praesent vestibulum dapibus nibh. Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Phasellus gravida semper nisi. Phasellus viverra nulla ut metus varius laoreet.',
       false
     ),
+    
     new Cards(
       'Card Three',
       'Fusce a quam. Fusce fermentum odio nec arcu. Sed aliquam ultrices mauris. Praesent metus tellus, elementum eu, semper a, adipiscing nec, purus.',
       'Praesent adipiscing. Aliquam eu nunc. Phasellus tempus. Nulla sit amet est.Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis illum at ullam quis incidunt distinctio ipsum voluptas modi praesentium nemo.',
       false
     ),
+    
     new Cards(
       'Card Four',
       'Nulla sit amet est. Proin faucibus arcu quis ante. Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum.',
       'Nam at tortor in tellus interdum sagittis. Praesent congue erat at massa. Vivamus elementum semper nisi. Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi. Quisque id odio. Aenean imperdiet. Etiam rhoncus. Phasellus magna. Curabitur at lacus ac velit ornare lobortis. Fusce risus nisl, viverra et, tempor et, pretium in, sapien. Praesent congue erat at massa. Praesent venenatis metus at tortor pulvinar varius.',
       true
     ),
+    
     new Cards(
       'Card Five',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quidem reiciendis cumque at minima velit?',

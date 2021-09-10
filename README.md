@@ -1,5 +1,5 @@
 # OOP & Classes Javascript
-## Two Section and Five Cards
+## Two Section and Five Cards - An Exercise
 
 ------------------------------------------------
 
